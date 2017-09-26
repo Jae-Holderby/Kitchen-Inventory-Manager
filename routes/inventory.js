@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res, next) {
-  queries.getItemByID(req.params.id)
+  let id = req.params.id;
+  queries.getItemByID(id)
   .then((item) => {
     res.json(item)
   });
@@ -32,6 +33,14 @@ router.put("/:id", function(req, res, next) {
     .then((editedItem) => {
       res.json(editedItem[0])
     });
+});
+
+router.delete('/:id', function(req, res, next) {
+  let id = req.params.id;
+  queries.deleteItem(id)
+  .then((deleted) => {
+    res.json({message: "Item deleted"})
+  });
 });
 
 

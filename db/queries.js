@@ -15,4 +15,7 @@ module.exports = {
   editItem: function(inventory_id, edit){
       return knex('inventory').where('id', inventory_id).update(edit).returning('*')
   },
+  deleteItem: function(id) {
+    return knex('inventory').where('id', id).del()
+  }
 }
