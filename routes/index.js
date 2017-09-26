@@ -10,4 +10,11 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/:id', function(req, res, next) {
+  queries.getItemByID(req.params.id)
+  .then((item) => {
+    res.json(item)
+  });
+});
+
 module.exports = router;
