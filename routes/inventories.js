@@ -6,7 +6,8 @@ const queries = require('../db/queries')
 router.get('/', function(req, res, next) {
   queries.getInventory()
   .then((items) => {
-    res.json(items)
+
+    res.json({inventory: items})
   });
 });
 
@@ -14,7 +15,7 @@ router.get('/:id', function(req, res, next) {
   let id = req.params.id;
   queries.getItemByID(id)
   .then((item) => {
-    res.json(item)
+    res.json({data: item})
   });
 });
 

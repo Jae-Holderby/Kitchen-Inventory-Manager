@@ -8,7 +8,7 @@ exports.seed = (knex, Promise) => {
     let items = [{
       id: 1,
       name: 'Chicken Thighs',
-      quantitiy: 8,
+      quantity: 8,
       protein: true,
       fruit: false,
       vegetable: false,
@@ -17,7 +17,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 2,
       name: 'Onions',
-      quantitiy: 1,
+      quantity: 1,
       protein: false,
       fruit: false,
       vegetable: true,
@@ -26,7 +26,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 3,
       name: 'Sweet Potatoes',
-      quantitiy: 4,
+      quantity: 4,
       protein: false,
       fruit: false,
       vegetable: true,
@@ -35,7 +35,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 4,
       name: 'Milk',
-      quantitiy: 3,
+      quantity: 3,
       protein: false,
       fruit: false,
       vegetable: false,
@@ -44,7 +44,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 5,
       name: 'Salmon Fillets',
-      quantitiy: 4,
+      quantity: 4,
       protein: true,
       fruit: false,
       vegetable: false,
@@ -53,7 +53,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 6,
       name: 'Almond Butter',
-      quantitiy: 15,
+      quantity: 15,
       protein: false,
       fruit: false,
       vegetable: false,
@@ -62,7 +62,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 7,
       name: 'Avocados',
-      quantitiy: 4,
+      quantity: 4,
       protein: false,
       fruit: true,
       vegetable: false,
@@ -71,7 +71,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 8,
       name: 'Apples',
-      quantitiy: 9,
+      quantity: 9,
       protein: false,
       fruit: true,
       vegetable: false,
@@ -80,7 +80,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 9,
       name: 'Cinnomon',
-      quantitiy: 9,
+      quantity: 9,
       protein: false,
       fruit: false,
       vegetable: false,
@@ -89,7 +89,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 10,
       name: 'Cumin',
-      quantitiy: 12,
+      quantity: 12,
       protein: false,
       fruit: false,
       vegetable: false,
