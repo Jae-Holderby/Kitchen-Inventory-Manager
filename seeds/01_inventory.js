@@ -7,7 +7,7 @@ exports.seed = (knex, Promise) => {
 
     let items = [{
       id: 1,
-      name: 'Chicken Thighs',
+      name: 'chicken thighs',
       quantity: 8,
       protein: true,
       fruit: false,
@@ -16,7 +16,7 @@ exports.seed = (knex, Promise) => {
       misc: false
     }, {
       id: 2,
-      name: 'Onions',
+      name: 'onions',
       quantity: 1,
       protein: false,
       fruit: false,
@@ -25,7 +25,7 @@ exports.seed = (knex, Promise) => {
       misc: false
     }, {
       id: 3,
-      name: 'Sweet Potatoes',
+      name: 'sweet potatoes',
       quantity: 4,
       protein: false,
       fruit: false,
@@ -34,7 +34,7 @@ exports.seed = (knex, Promise) => {
       misc: false
     }, {
       id: 4,
-      name: 'Milk',
+      name: 'milk',
       quantity: 3,
       protein: false,
       fruit: false,
@@ -43,7 +43,7 @@ exports.seed = (knex, Promise) => {
       misc: true
     }, {
       id: 5,
-      name: 'Salmon Fillets',
+      name: 'salmon fillets',
       quantity: 4,
       protein: true,
       fruit: false,
@@ -52,7 +52,7 @@ exports.seed = (knex, Promise) => {
       misc: false
     }, {
       id: 6,
-      name: 'Almond Butter',
+      name: 'almond butter',
       quantity: 15,
       protein: false,
       fruit: false,
@@ -61,7 +61,7 @@ exports.seed = (knex, Promise) => {
       misc: true
     }, {
       id: 7,
-      name: 'Avocados',
+      name: 'avocados',
       quantity: 4,
       protein: false,
       fruit: true,
@@ -70,7 +70,7 @@ exports.seed = (knex, Promise) => {
       misc: false
     }, {
       id: 8,
-      name: 'Apples',
+      name: 'apples',
       quantity: 9,
       protein: false,
       fruit: true,
@@ -79,7 +79,7 @@ exports.seed = (knex, Promise) => {
       misc: false
     }, {
       id: 9,
-      name: 'Cinnomon',
+      name: 'cinnomon',
       quantity: 9,
       protein: false,
       fruit: false,
@@ -88,7 +88,7 @@ exports.seed = (knex, Promise) => {
       misc: false
     }, {
       id: 10,
-      name: 'Cumin',
+      name: 'cumin',
       quantity: 12,
       protein: false,
       fruit: false,
