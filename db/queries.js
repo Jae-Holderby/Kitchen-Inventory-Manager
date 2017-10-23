@@ -1,7 +1,7 @@
 const knex = require('./knex')
 
 module.exports = {
-  getInventory: function(){
+  getFood: function(){
     return knex('*').from('food')
   },
   getItemByID: function(food_id){

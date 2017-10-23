@@ -4,10 +4,10 @@ const queries = require('../db/queries')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  queries.getInventory()
+  queries.getfood()
   .then((items) => {
 
-    res.json({inventory: items})
+    res.json({foods: items})
   });
 });
 

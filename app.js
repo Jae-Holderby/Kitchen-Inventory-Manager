@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const index = require('./routes/index');
 const members = require('./routes/members');
-const inventories = require('./routes/inventories');
+const foods = require('./routes/foods');
 const app = express();
 
 // view engine setup
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/members', members);
-app.use('/inventories', inventories)
+app.use('/foods', foods)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
