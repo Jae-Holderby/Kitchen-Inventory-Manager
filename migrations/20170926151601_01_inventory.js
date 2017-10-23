@@ -2,7 +2,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('inventory', (table) => {
     table.increments();
-    table.text('name').notNullable();
+    table.text('name').notNullable().unique();
     table.integer('quantity');
     table.boolean('protein');
     table.boolean('fruit');
