@@ -2,20 +2,20 @@ const knex = require('./knex')
 
 module.exports = {
   getInventory: function(){
-    return knex('*').from('inventory')
+    return knex('*').from('food')
   },
-  getItemByID: function(inventory_id){
-    return knex('inventory')
-    .where('id', inventory_id).first();
+  getItemByID: function(food_id){
+    return knex('food')
+    .where('id', food_id).first();
   },
   addItem: function(body){
-    return knex('inventory')
+    return knex('food')
     .insert(body).returning('*')
   },
   editItem: function(inventory_id, edit){
-      return knex('inventory').where('id', inventory_id).update(edit).returning('*')
+      return knex('food').where('id', inventory_id).update(edit).returning('*')
   },
   deleteItem: function(id) {
-    return knex('inventory').where('id', id).del()
+    return knex('food').where('id', id).del()
   }
 }
