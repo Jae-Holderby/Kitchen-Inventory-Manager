@@ -1,6 +1,6 @@
 exports.seed = (knex, Promise) => {
 
-  return knex.raw('DELETE FROM food_type; ALTER SEQUENCE food_type_id_seq RESTART WITH 2;')
+  return knex.raw('DELETE FROM food_type; ALTER SEQUENCE food_type_id_seq RESTART WITH 6;')
 
   .then(() => {
 
