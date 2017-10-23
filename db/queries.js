@@ -7,9 +7,12 @@ module.exports = {
     .innerJoin('food_type', 'food_type.id', 'food.food_type_id')
     .innerJoin('member', 'member.id', 'food.member_id')
   },
-  getItemByID: function(food_id){
+  getFoodByID: function(food_id){
     return knex('food')
-    .where('id', food_id).first();
+    .select('food.id', 'food.name as food', 'food.quantity as quantity', 'food_type.name as food_type', 'member.id as member_id', 'member.name as member_name')
+    .innerJoin('food_type', 'food_type.id', 'food.food_type_id')
+    .innerJoin('member', 'member.id', 'food.member_id')
+    .where('food.id', food_id).first();
   },
   addItem: function(body){
     return knex('food')

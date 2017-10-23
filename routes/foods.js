@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/:id', function(req, res, next) {
   let id = req.params.id;
-  queries.getItemByID(id)
+  queries.getFoodByID(id)
   .then((item) => {
     res.json({data: item})
   });
