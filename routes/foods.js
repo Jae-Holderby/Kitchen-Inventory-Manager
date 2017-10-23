@@ -4,7 +4,7 @@ const queries = require('../db/queries')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  queries.getfood()
+  queries.getFood()
   .then((items) => {
 
     res.json({foods: items})
