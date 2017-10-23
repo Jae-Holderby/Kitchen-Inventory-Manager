@@ -14,6 +14,10 @@ exports.seed = (knex, Promise) => {
       recipe_id: 1,
       food_id: 3,
       quantity: 2
+    }, {
+      id: 3,
+      recipe_id: 1,
+      food_id: 9
     }];
 
     return knex('ingredient').insert(ingredients);

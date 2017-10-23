@@ -2,7 +2,10 @@ const knex = require('./knex')
 
 module.exports = {
   getFood: function(){
-    return knex('*').from('food')
+    return knex('food')
+    .select('food.id', 'food.name as food', 'food.quantity as quantity', 'food_type.name as food_type', 'member.id as member_id', 'member.name as member_name')
+    .innerJoin('food_type', 'food_type.id', 'food.food_type_id')
+    .innerJoin('member', 'member.id', 'food.member_id')
   },
   getItemByID: function(food_id){
     return knex('food')
