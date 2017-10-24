@@ -30,7 +30,7 @@ exports.seed = (knex, Promise) => {
       member_id: 1
     }, {
       id: 5,
-      name: 'salmon fillets',
+      name: 'salmon steaks',
       quantity: 4,
       food_type_id: 1,
       member_id: 1
