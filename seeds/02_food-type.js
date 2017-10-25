@@ -6,19 +6,19 @@ exports.seed = (knex, Promise) => {
 
     let foodTypes = [{
       id: 1,
-      name: 'protein'
+      name: 'proteins'
     }, {
       id: 2,
-      name: 'fruit'
+      name: 'fruits'
     }, {
       id: 3,
-      name: 'vegetable'
+      name: 'vegetables'
     }, {
       id: 4,
-      name: 'spice'
+      name: 'spices'
     }, {
       id: 5,
-      name: 'misc'
+      name: 'miscellaneous'
     }];
 
     return knex('food_type').insert(foodTypes);
