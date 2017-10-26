@@ -8,6 +8,7 @@ exports.seed = (knex, Promise) => {
       id: 1,
       name: 'garlic chicken with sweet potatoes',
       member_id:1
+      selected: false
     }];
 
     return knex('recipe').insert(recipes);
