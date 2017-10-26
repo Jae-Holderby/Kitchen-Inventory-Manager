@@ -22,7 +22,8 @@ router.get('/:id', function(req, res, next) {
     queries.getRecipeById(recipe_id)
     .then(recipe => {
       let name = recipe.name
-      let data = {name, ingredients}
+      let selected = recipe.selected
+      let data = {name, selected, ingredients}
       res.json({recipe: data})
     })
 
