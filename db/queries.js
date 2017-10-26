@@ -31,7 +31,7 @@ module.exports = {
   },
   getRecipeById: function(recipe_id){
     return knex('recipe')
-    .select('name', 'selected',)
+    .select('name', 'selected')
     .where('recipe.id', recipe_id).first()
   },
   getIngredientsByRecipeId: function(recipe_id){
