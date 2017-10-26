@@ -24,15 +24,20 @@ module.exports = {
   deleteItem: function(id) {
     return knex('food').where('id', id).del()
   },
-  getIngredientsByRecipeId: function(recipe_id){
-    return knex('ingredient')
-    .select('food.name as ingredient', 'ingredient.quantity as quantity')
-    .innerJoin('food', 'food.id', 'ingredient.food_id')
-    .where('recipe_id', recipe_id)
+  getRecipes: function(){
+    return knex('recipe')
+    .select('recipe.id','recipe.name as recipe', 'member.id as member_id', 'member.name as name')
+    .innerJoin('member', 'member.id', 'recipe.member_id')
   },
   getRecipeById: function(recipe_id){
     return knex('recipe')
     .select('name')
     .where('recipe.id', recipe_id).first()
+  },
+  getIngredientsByRecipeId: function(recipe_id){
+    return knex('ingredient')
+    .select('food.name as ingredient', 'ingredient.quantity as quantity')
+    .innerJoin('food', 'food.id', 'ingredient.food_id')
+    .where('recipe_id', recipe_id)
   }
 }

@@ -2,6 +2,14 @@ const express = require('express');
 const router = express.Router();
 const queries = require('../db/queries')
 
+
+router.get('/', function(req, res, next) {
+  queries.getRecipes()
+  .then((recipes) => {
+    res.json({recipes: recipes})
+  });
+});
+
 router.get('/:id', function(req, res, next) {
     let recipe_id = req.params.id;
     let ingredients = {}
