@@ -7,7 +7,7 @@ exports.seed = (knex, Promise) => {
     let recipes = [{
       id: 1,
       name: 'garlic chicken with sweet potatoes',
-      member_id:1
+      member_id:1,
       selected: false
     }];
 
