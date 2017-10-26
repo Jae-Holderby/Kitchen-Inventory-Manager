@@ -5,10 +5,14 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
 const index = require('./routes/index');
 const members = require('./routes/members');
 const foods = require('./routes/foods');
+const recipes = require('./routes/recipes')
+
 const app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/members', members);
 app.use('/foods', foods)
+app.use('/recipes', recipes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
