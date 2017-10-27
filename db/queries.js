@@ -41,7 +41,7 @@ module.exports = {
     .where('recipe_id', recipe_id)
   },
   editRecipe: function(recipe_id, edit){
-    return kenx('recipe').where('id', recipe_id)
+    return knex('recipe').where('id', recipe_id)
     .update(edit).returning('*')
   }
 }
