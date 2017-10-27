@@ -39,5 +39,9 @@ module.exports = {
     .select('food.name as ingredient', 'ingredient.quantity as quantity')
     .innerJoin('food', 'food.id', 'ingredient.food_id')
     .where('recipe_id', recipe_id)
+  },
+  editRecipe: function(recipe_id, edit){
+    return kenx('recipe').where('id', recipe_id)
+    .update(edit).returning('*')
   }
 }
