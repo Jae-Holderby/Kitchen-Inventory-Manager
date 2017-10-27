@@ -32,9 +32,9 @@ router.get('/:id', function(req, res, next) {
 router.put("/:id", function(req, res, next) {
   let id = req.params.id;
   let edit = req.body;
-  queries.editItem(id, edit)
-    .then((editedItem) => {
-      res.json(editedItem[0])
+  queries.editRecipe(id, edit)
+    .then((editedRecipe) => {
+      res.json(editedRecipe[0])
     });
 });
 
