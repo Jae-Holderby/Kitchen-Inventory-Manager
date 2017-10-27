@@ -6,12 +6,12 @@ exports.seed = (knex, Promise) => {
 
     let recipes = [{
       id: 1,
-      name: 'garlic chicken with sweet potatoes',
+      name: 'chicken with sweet potatoes',
       member_id: 1,
       selected: false
     }, {
       id: 2,
-      name: 'shitty guac',
+      name: 'guacamole',
       member_id: 1,
       selected: false
     }];
