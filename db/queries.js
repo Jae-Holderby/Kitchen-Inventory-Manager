@@ -31,12 +31,12 @@ module.exports = {
   },
   getRecipeById: function(recipe_id){
     return knex('recipe')
-    .select('name', 'selected')
+    .select('id', 'name', 'selected')
     .where('recipe.id', recipe_id).first()
   },
   getIngredientsByRecipeId: function(recipe_id){
     return knex('ingredient')
-    .select('food.name as ingredient', 'ingredient.quantity as quantity')
+    .select('ingredient.food_id as food_id','food.name as ingredient', 'ingredient.quantity as quantity')
     .innerJoin('food', 'food.id', 'ingredient.food_id')
     .where('recipe_id', recipe_id)
   },
