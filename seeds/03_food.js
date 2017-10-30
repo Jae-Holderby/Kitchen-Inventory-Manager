@@ -25,7 +25,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 4,
       name: 'milk',
-      quantity: 1,
+      quantity: 3,
       food_type_id: 5,
       member_id: 1
     }, {
