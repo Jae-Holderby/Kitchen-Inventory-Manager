@@ -59,6 +59,9 @@ module.exports = {
     return knex('member')
     .insert(body).returning('*')
   },
+  getMembers: function(){
+    return knex('member').select('*')
+  },
   newMemebersFoods: function(member_id){
     return [{
       name: 'chicken thighs',

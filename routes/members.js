@@ -4,7 +4,10 @@ const queries = require('../db/queries')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  queries.getMembers()
+  .then((members) => {
+    res.json({members: members})
+  });
 });
 
 router.post('/', function(req, res, next) {
