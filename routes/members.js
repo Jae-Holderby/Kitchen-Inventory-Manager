@@ -17,10 +17,9 @@ router.post('/', function(req, res, next) {
     var body = queries.newMemebersFoods(newMember[0].id)
     queries.addItem(body)
     .then((response)=> {
-        res.json(newMember[0])
+        res.json(newMember[])
       })
   })
-
 });
 
 // addItem()

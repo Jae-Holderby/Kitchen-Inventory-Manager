@@ -62,6 +62,13 @@ module.exports = {
   getMembers: function(){
     return knex('member').select('*')
   },
+  editIngredient: function(ingredient_id, edit){
+    return knex('ingredient').where('id', ingredient_id)
+    .update(edit).returning('*')
+  },
+  deleteIngredient: function(id) {
+    return knex('ingredient').where('id', id).del()
+  },
   newMemebersFoods: function(member_id){
     return [{
       name: 'chicken thighs',

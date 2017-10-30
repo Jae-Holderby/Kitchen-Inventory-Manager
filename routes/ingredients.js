@@ -10,4 +10,21 @@ router.post('/', function(req, res, next) {
   });
 });
 
+router.put("/:id", function(req, res, next) {
+  let id = req.params.id;
+  let edit = req.body;
+  queries.editIngredient(id, edit)
+    .then((editedIngredient) => {
+      res.json(editedIngredient[0])
+    });
+});
+
+router.delete('/:id', function(req, res, next){
+  let id = req.params.id;
+  queries.deleteIngredient(id)
+  .then((deleted) => {
+    res.json({message: "ingredient deleted"})
+  });
+});
+
 module.exports = router;
