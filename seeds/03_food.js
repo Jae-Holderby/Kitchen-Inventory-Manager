@@ -25,7 +25,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 4,
       name: 'milk',
-      quantity: 3,
+      quantity: 1,
       food_type_id: 5,
       member_id: 1
     }, {
@@ -37,7 +37,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 6,
       name: 'almond butter',
-      quantity: 15,
+      quantity: 1,
       food_type_id: 5,
       member_id: 1
     }, {
@@ -55,13 +55,13 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 9,
       name: 'cinnomon',
-      quantity: 9,
+      quantity: 1,
       food_type_id: 4,
       member_id: 1
     }, {
       id: 10,
       name: 'cumin',
-      quantity: 12,
+      quantity: 1,
       food_type_id: 4,
       member_id: 1
     }];
