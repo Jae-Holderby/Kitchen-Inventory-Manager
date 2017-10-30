@@ -40,8 +40,15 @@ module.exports = {
     .innerJoin('food', 'food.id', 'ingredient.food_id')
     .where('recipe_id', recipe_id)
   },
+  addRecipe: function(body){
+    return knex('recipe')
+    .insert(body).returning('*')
+  },
   editRecipe: function(recipe_id, edit){
     return knex('recipe').where('id', recipe_id)
     .update(edit).returning('*')
+  },
+  deleteRecipe: function(id) {
+    return knex('recipe').where('id', id).del()
   }
 }

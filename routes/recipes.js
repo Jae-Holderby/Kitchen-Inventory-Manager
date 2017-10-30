@@ -39,6 +39,21 @@ router.put("/:id", function(req, res, next) {
     });
 });
 
+router.post('/', function(req, res, next) {
+  let body = req.body
+  queries.addRecipe(body)
+  .then((newRecipe) => {
+    res.json(newRecipe[0])
+  });
+});
+
+router.delete('/:id', function(req, res, next){
+  let id = req.params.id;
+  queries.deleteRecipe(id)
+  .then((deleted) => {
+    res.json({message: "Recipe deleted"})
+  });
+});
 
 
 
