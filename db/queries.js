@@ -36,7 +36,7 @@ module.exports = {
   },
   getIngredientsByRecipeId: function(recipe_id){
     return knex('ingredient')
-    .select('ingredient.food_id as food_id','food.name as ingredient', 'ingredient.quantity as quantity')
+    .select('ingredient.id as ingredient_id', 'ingredient.food_id as food_id','food.name as ingredient', 'ingredient.quantity as quantity')
     .innerJoin('food', 'food.id', 'ingredient.food_id')
     .where('recipe_id', recipe_id)
   },
