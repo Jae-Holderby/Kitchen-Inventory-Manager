@@ -74,53 +74,45 @@ module.exports = {
       food_type_id: 3,
       member_id: member_id
     }, {
-      id: 3,
       name: 'sweet potatoes',
       quantity: 0,
       food_type_id: 3,
       member_id: member_id
     }, {
-      id: 4,
       name: 'milk',
       quantity: 0,
       food_type_id: 5,
       member_id: member_id
     }, {
-      id: 5,
       name: 'salmon steaks',
       quantity: 0,
       food_type_id: 1,
       member_id: member_id
     }, {
-      id: 6,
       name: 'almond butter',
       quantity: 0,
       food_type_id: 5,
       member_id: member_id
     }, {
-      id: 7,
       name: 'avocados',
       quantity: 0,
       food_type_id: 2,
       member_id: member_id
     }, {
-      id: 8,
       name: 'gala apples',
       quantity: 0,
       food_type_id: 2,
       member_id: member_id
     }, {
-      id: 9,
       name: 'cinnomon',
       quantity: 0,
       food_type_id: 4,
       member_id: member_id
     }, {
-      id: 10,
       name: 'cumin',
       quantity: 0,
       food_type_id: 4,
       member_id: member_id
-    }];
+    }]
   }
 }

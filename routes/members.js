@@ -14,9 +14,16 @@ router.post('/', function(req, res, next) {
   let body = req.body
   queries.addMember(body)
   .then((newMember) => {
-    console.log(newMember[0])
-  });
+    var body = queries.newMemebersFoods(newMember[0].id)
+    queries.addItem(body)
+    .then((response)=> {
+        res.json(newMember[0])
+      })
+  })
+
 });
 
+// addItem()
+// newMemebersFoods()
 
 module.exports = router;
