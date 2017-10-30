@@ -50,5 +50,9 @@ module.exports = {
   },
   deleteRecipe: function(id) {
     return knex('recipe').where('id', id).del()
+  },
+  addIngredient: function(body){
+    return knex('ingredient')
+    .insert(body).returning('*')
   }
 }

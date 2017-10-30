@@ -10,6 +10,7 @@ const index = require('./routes/index');
 const members = require('./routes/members');
 const foods = require('./routes/foods');
 const recipes = require('./routes/recipes')
+const ingredients = require('./routes/ingredients')
 
 const app = express();
 
