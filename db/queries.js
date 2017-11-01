@@ -29,6 +29,9 @@ module.exports = {
     .select('recipe.id','recipe.name as recipe', 'recipe.selected', 'member.id as member_id', 'member.name as name')
     .innerJoin('member', 'member.id', 'recipe.member_id')
   },
+  getIngredients: function(){
+    return knex('ingredient')
+  },
   getRecipeById: function(recipe_id){
     return knex('recipe')
     .select('id', 'name', 'selected')
@@ -39,6 +42,10 @@ module.exports = {
     .select('ingredient.id as ingredient_id', 'ingredient.food_id as food_id','food.name as ingredient', 'ingredient.quantity as quantity')
     .innerJoin('food', 'food.id', 'ingredient.food_id')
     .where('recipe_id', recipe_id)
+  },
+  getMemberById: function(member_id){
+    return knex('member')
+    .where('id', member_id)
   },
   addRecipe: function(body){
     return knex('recipe')

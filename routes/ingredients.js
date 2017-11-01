@@ -2,6 +2,13 @@ const express = require('express');
 const router = express.Router();
 const queries = require('../db/queries')
 
+router.get('/', function(req, res, next) {
+  queries.getIngredients()
+  .then((ingredients) => {
+    res.json({ingredients: ingredients})
+  });
+});
+
 router.post('/', function(req, res, next) {
   let body = req.body
   queries.addIngredient(body)

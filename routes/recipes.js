@@ -16,7 +16,6 @@ router.get('/:id', function(req, res, next) {
   queries.getIngredientsByRecipeId(recipe_id)
   .then((ingredient) => {
     ingredients = ingredient
-
   })
   .then(() => {
     queries.getRecipeById(recipe_id)

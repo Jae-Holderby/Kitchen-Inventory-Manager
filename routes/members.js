@@ -10,6 +10,14 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/:id', function(req, res, next) {
+  let id = req.params.id;
+  queries.getMemberById(id)
+  .then((member) => {
+    res.json({member: member})
+  });
+});
+
 router.post('/', function(req, res, next) {
   let body = req.body
   queries.addMember(body)
