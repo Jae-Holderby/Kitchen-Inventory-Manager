@@ -6,8 +6,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const http = require('http')
-const Socket = require('socket.io')
+// const http = require('http')
+// const Socket = require('socket.io')
 
 const index = require('./routes/index');
 const members = require('./routes/members');
@@ -16,8 +16,8 @@ const recipes = require('./routes/recipes')
 const ingredients = require('./routes/ingredients')
 
 const app = express();
-const server = http.createServer(app)
-const io = new Socket(server)
+// const server = http.createServer(app)
+// const io = new Socket(server)
 const port = process.env.PORT || 3000;
 
 
@@ -41,24 +41,22 @@ app.use('/ingredients', ingredients)
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
-server.listen(port, function() {
+app.listen(port)
 
-})
+// var room = "inventory"
 
-var room = "inventory"
-
-io.on('connection', function(socket){
-
-  app.use(function(req, res, next){
-    socket.send('message')
-    console.log("middleware");
-    next();
-  })
-  console.log("user has connected to " + room);
-  socket.on('open', function(data){
-    console.log(data);
-  })
-})
+// io.on('connection', function(socket){
+//
+//   app.use(function(req, res, next){
+//     socket.send('message')
+//     console.log("middleware");
+//     next();
+//   })
+//   console.log("user has connected to " + room);
+//   socket.on('open', function(data){
+//     console.log(data);
+//   })
+// })
 
 
 module.exports = app;
