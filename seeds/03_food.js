@@ -1,6 +1,6 @@
 exports.seed = (knex, Promise) => {
 
-  return knex.raw('DELETE FROM food; ALTER SEQUENCE food_id_seq RESTART WITH 11;')
+  return knex.raw('DELETE FROM food; ALTER SEQUENCE food_id_seq RESTART WITH 16;')
 
   .then(() => {
 
@@ -13,7 +13,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 2,
       name: 'sweet onions',
-      quantity: 1,
+      quantity: 3,
       food_type_id: 3,
       member_id: 1
     }, {
@@ -25,7 +25,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 4,
       name: 'milk',
-      quantity: 3,
+      quantity: 1,
       food_type_id: 5,
       member_id: 1
     }, {
@@ -49,7 +49,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 8,
       name: 'gala apples',
-      quantity: 9,
+      quantity: 5,
       food_type_id: 2,
       member_id: 1
     }, {
@@ -61,6 +61,48 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 10,
       name: 'cumin',
+      quantity: 1,
+      food_type_id: 4,
+      member_id: 1
+    }, {
+      id: 11,
+      name: 'limes',
+      quantity: 3,
+      food_type_id: 2,
+      member_id: 1
+    }, {
+      id: 12,
+      name: 'cayenne',
+      quantity: 1,
+      food_type_id: 4,
+      member_id: 1
+    }, {
+      id: 13,
+      name: 'jalapenos',
+      quantity: 4,
+      food_type_id: 3,
+      member_id: 1
+    }, {
+      id: 14,
+      name: 'roma tomatoes',
+      quantity: 3,
+      food_type_id: 3,
+      member_id: 1
+    }, {
+      id: 15,
+      name: 'garlic cloves',
+      quantity: 4,
+      food_type_id: 3,
+      member_id: 1
+    }, {
+      id: 15,
+      name: 'salt',
+      quantity: 1,
+      food_type_id: 4,
+      member_id: 1
+    }, {
+      id: 15,
+      name: 'cilantro',
       quantity: 1,
       food_type_id: 4,
       member_id: 1
