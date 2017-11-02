@@ -8,17 +8,17 @@ exports.seed = (knex, Promise) => {
       id: 1,
       name: 'chicken with sweet potatoes',
       member_id: 1,
-      selected: false
+      selected: true
     }, {
       id: 2,
       name: 'guacamole',
       member_id: 1,
-      selected: false
+      selected: true
     }, {
       id: 3,
       name: 'roast chicken',
       member_id: 1,
-      selected: false
+      selected: true
     }, {
       id: 4,
       name: 'turkey burgers',
