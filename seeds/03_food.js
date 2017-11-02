@@ -43,7 +43,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 7,
       name: 'avocados',
-      quantity: 4,
+      quantity: 3,
       food_type_id: 2,
       member_id: 1
     }, {
@@ -85,7 +85,7 @@ exports.seed = (knex, Promise) => {
     }, {
       id: 14,
       name: 'roma tomatoes',
-      quantity: 3,
+      quantity: 2,
       food_type_id: 3,
       member_id: 1
     }, {
