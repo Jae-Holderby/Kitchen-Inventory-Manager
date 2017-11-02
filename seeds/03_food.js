@@ -1,6 +1,6 @@
 exports.seed = (knex, Promise) => {
 
-  return knex.raw('DELETE FROM food; ALTER SEQUENCE food_id_seq RESTART WITH 16;')
+  return knex.raw('DELETE FROM food; ALTER SEQUENCE food_id_seq RESTART WITH 26;')
 
   .then(() => {
 
@@ -95,14 +95,62 @@ exports.seed = (knex, Promise) => {
       food_type_id: 3,
       member_id: 1
     }, {
-      id: 15,
+      id: 16,
       name: 'salt',
       quantity: 1,
       food_type_id: 4,
       member_id: 1
     }, {
-      id: 15,
+      id: 17,
       name: 'cilantro',
+      quantity: 1,
+      food_type_id: 4,
+      member_id: 1
+    }, {
+      id: 18,
+      name: 'whole chicken',
+      quantity: 1,
+      food_type_id: 1,
+      member_id: 1
+    }, {
+      id: 19,
+      name: 'butter',
+      quantity: 4,
+      food_type_id: 5,
+      member_id: 1
+    }, {
+      id: 20,
+      name: 'celery',
+      quantity: 5,
+      food_type_id: 3,
+      member_id: 1
+    }, {
+      id: 21,
+      name: 'onion powder',
+      quantity: 1,
+      food_type_id: 4,
+      member_id: 1
+    }, {
+      id: 22,
+      name: 'ground turkey',
+      quantity: 4,
+      food_type_id: 1,
+      member_id: 1
+    }, {
+      id: 23,
+      name: 'bread crumbs',
+      quantity: 1,
+      food_type_id: 5,
+      member_id: 1
+    }, {
+      id: 24,
+      name: 'eggs',
+      quantity: 12,
+      food_type_id: 1,
+      member_id: 1
+    }, {
+      id: 25,
+      name: 'parsley',
       quantity: 1,
       food_type_id: 4,
       member_id: 1
