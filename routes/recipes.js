@@ -38,6 +38,15 @@ router.put("/:id", function(req, res, next) {
     });
 });
 
+router.patch("/:id", function(req, res, next) {
+  let id = req.params.id;
+  let edit = req.body;
+  queries.editRecipe(id, edit)
+    .then((editedRecipe) => {
+      res.json(editedRecipe[0])
+    });
+});
+
 router.post('/', function(req, res, next) {
   let body = req.body
   queries.addRecipe(body)

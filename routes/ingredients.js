@@ -26,6 +26,16 @@ router.put("/:id", function(req, res, next) {
     });
 });
 
+router.patch("/:id", function(req, res, next) {
+  let id = req.params.id;
+  let edit = req.body;
+  queries.editIngredient(id, edit)
+    .then((editedIngredient) => {
+      res.json(editedIngredient[0])
+    });
+});
+
+
 router.delete('/:id', function(req, res, next){
   let id = req.params.id;
   queries.deleteIngredient(id)

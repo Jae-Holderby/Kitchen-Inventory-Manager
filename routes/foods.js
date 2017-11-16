@@ -6,7 +6,7 @@ const queries = require('../db/queries')
 router.get('/', function(req, res, next) {
   queries.getFood()
   .then((items) => {
-    
+
     res.json({foods: items})
   });
 });
@@ -28,6 +28,15 @@ router.post('/', function(req, res, next) {
 });
 
 router.put("/:id", function(req, res, next) {
+  let id = req.params.id;
+  let edit = req.body;
+  queries.editItem(id, edit)
+    .then((editedItem) => {
+      res.json(editedItem[0])
+    });
+});
+
+router.patch("/:id", function(req, res, next) {
   let id = req.params.id;
   let edit = req.body;
   queries.editItem(id, edit)
